@@ -1,12 +1,17 @@
 from fastapi import FastAPI
+from routers import users
+from fastapi.staticfiles import StaticFiles
+
+#Montar server con el comando uvicorn main:app --reload
+#LocalHost : http://127.0.0.1:8000
+#Documentacion: http://127.0.0.1:8000/doc
+#Documentacion: http://127.0.0.1:8000/redoc
 
 app = FastAPI()
 
-#El get es una funcion dentro del protocolo https, y lo que hace es pedir algo a una URL
+app.include_router(users.router)
+app.mount("/static", StaticFiles(directory="static"), name = "static")
 
-#Siempre que se llama a un servidor la funcion tiene que ser asincrona, lo que significa que el programa puede funcionar mientras 
-#espera a que la funcion reciba respuesta del servidor
-
-@app.get("/") #/ a secas es la raiz de la IP donde se despliega l app
+@app.get("/") 
 async def root():
     return {"message": "Hola FastAPI"}
