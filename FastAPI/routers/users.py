@@ -15,9 +15,9 @@ class User(BaseModel):
     age : int
 
 users_list = [
-    User(id = 1, name = "Alberto", surname = "Eiza",url =  "aeiza.com",age = 24),
-    User(id = 2, name = "Juan", surname = "Eiza",url =  "jeiza.com",age = 20),
-    User(id = 3, name = "Aniz", surname = "Hernandez",url =  "abogada.com",age = 25)
+    User(id = 1, name = "User1_name", surname = "User1_surname",url =  "User1.com",age = 24),
+    User(id = 2, name = "User2_name", surname = "User2_surname",url =  "User2.com",age = 20),
+    User(id = 3, name = "User3_name", surname = "User3_surname",url =  "User3.com",age = 25)
     ]
 
 #Busqueda de usuarios en la db fake y manejo de errores
@@ -53,7 +53,7 @@ async def user(user : User):
     users_list.append(user)
     return user
         
-#Put actualiza varios, pero sepuede usar para actualizar solo un campo tambien, aunqu epara eso mejor usar PATCH
+#Put actualiza varios, pero se puede usar para actualizar solo un campo tambien, aunqu epara eso mejor usar PATCH
 @router.put("/")
 async def user(user: User):
     
