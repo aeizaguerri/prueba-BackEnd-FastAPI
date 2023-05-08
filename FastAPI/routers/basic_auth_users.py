@@ -20,16 +20,16 @@ class User_DB(User):
 
 users_db = {
     "aeizaguerri":{
-        "username" : "aeizaguerri",
-        "full_name" : "Alberto Eizaguerri",
-        "email" : "aeiza@ggg.com",
+        "username" : "User1",
+        "full_name" : "User1_Name User1_Surname",
+        "email" : "User1@mail.com",
         "disabled" : False,
         "password" : "123456"
     },
     "anizhm":{
-        "username" : "anizhm",
-        "full_name" : "Anai Hernandez",
-        "email" : "abogada@ggg.com",
+        "username" : "User2",
+        "full_name" : "User2_Name User2_Surname",
+        "email" : "User2@mail.com",
         "disabled" : True,
         "password" : "654321"
     }
