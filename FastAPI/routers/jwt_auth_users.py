@@ -25,17 +25,17 @@ class User_DB(User):
     password : str
 
 users_db = {
-    "aeizaguerri":{
-        "username" : "aeizaguerri",
-        "full_name" : "Alberto Eizaguerri",
-        "email" : "aeiza@ggg.com",
+    "User1":{
+        "username" : "User1",
+        "full_name" : "User1_name User1_surname",
+        "email" : "User1@mail.com",
         "disabled" : False,
         "password" : "$2a$12$UBxLjQQoQxSNFqgdmp9N7eoyXfiNYSmU0e7os5RoHPLjoVkVsT2iW"
     },
     "anizhm":{
-        "username" : "anizhm",
-        "full_name" : "Anai Hernandez",
-        "email" : "abogada@ggg.com",
+        "username" : "User2",
+        "full_name" : "User2_name User2_surname",
+        "email" : "User2@mail.com",
         "disabled" : True,
         "password" : "$2a$12$fVlWf7rp1KQXfOM6AD7npu4Es6SfrnbHWIm5NQmTFvw5BqsRCyi4a"
     }
